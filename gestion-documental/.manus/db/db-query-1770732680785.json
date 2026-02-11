@@ -1,0 +1,23 @@
+{
+  "query": "SELECT * FROM users LIMIT 5",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2mciBb6nPqgsdQa.496c41228a3b --database Kgz6DNfZa9ot4yWR2J8W2H --execute SELECT * FROM users LIMIT 5",
+  "rows": [
+    {
+      "id": "1",
+      "openId": "BepR9rXd3PxaE6KmcVgBAB",
+      "name": "Mateo Andrés Casas López",
+      "email": "math.casaslopez@gmail.com",
+      "loginMethod": "google",
+      "role": "admin",
+      "createdAt": "2026-02-10 06:28:50",
+      "updatedAt": "2026-02-10 14:11:12",
+      "lastSignedIn": "2026-02-10 14:11:13",
+      "appRole": "administrador",
+      "isActive": "1"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\topenId\tname\temail\tloginMethod\trole\tcreatedAt\tupdatedAt\tlastSignedIn\tappRole\tisActive\n1\tBepR9rXd3PxaE6KmcVgBAB\tMateo Andrés Casas López\tmath.casaslopez@gmail.com\tgoogle\tadmin\t2026-02-10 06:28:50\t2026-02-10 14:11:12\t2026-02-10 14:11:13\tadministrador\t1\n",
+  "stderr": "",
+  "execution_time_ms": 351
+}

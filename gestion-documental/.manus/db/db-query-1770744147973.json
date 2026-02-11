@@ -1,0 +1,30 @@
+{
+  "query": "SELECT modulo, COUNT(*) as total FROM expedientes GROUP BY modulo ORDER BY total DESC;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2mciBb6nPqgsdQa.496c41228a3b --database Kgz6DNfZa9ot4yWR2J8W2H --execute SELECT modulo, COUNT(*) as total FROM expedientes GROUP BY modulo ORDER BY total DESC;",
+  "rows": [
+    {
+      "modulo": "archivados",
+      "total": "1887"
+    },
+    {
+      "modulo": "inf_ordinarios",
+      "total": "118"
+    },
+    {
+      "modulo": "inf_logos",
+      "total": "40"
+    },
+    {
+      "modulo": "revocatorias",
+      "total": "14"
+    },
+    {
+      "modulo": "salvamentos",
+      "total": "14"
+    }
+  ],
+  "messages": [],
+  "stdout": "modulo\ttotal\narchivados\t1887\ninf_ordinarios\t118\ninf_logos\t40\nrevocatorias\t14\nsalvamentos\t14\n",
+  "stderr": "",
+  "execution_time_ms": 430
+}

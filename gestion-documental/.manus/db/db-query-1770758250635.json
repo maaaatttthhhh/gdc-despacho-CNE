@@ -1,0 +1,35 @@
+{
+  "query": "SELECT id, fechaRecibido, fechaArchivo FROM expedientes WHERE modulo='procesos_practicas' AND fechaRecibido IS NOT NULL LIMIT 5",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2mciBb6nPqgsdQa.496c41228a3b --database Kgz6DNfZa9ot4yWR2J8W2H --execute SELECT id, fechaRecibido, fechaArchivo FROM expedientes WHERE modulo='procesos_practicas' AND fechaRecibido IS NOT NULL LIMIT 5",
+  "rows": [
+    {
+      "id": "121007",
+      "fechaRecibido": "45873",
+      "fechaArchivo": "NULL"
+    },
+    {
+      "id": "121008",
+      "fechaRecibido": "45875",
+      "fechaArchivo": "NULL"
+    },
+    {
+      "id": "121009",
+      "fechaRecibido": "45875",
+      "fechaArchivo": "NULL"
+    },
+    {
+      "id": "121010",
+      "fechaRecibido": "45875",
+      "fechaArchivo": "NULL"
+    },
+    {
+      "id": "121011",
+      "fechaRecibido": "45875",
+      "fechaArchivo": "NULL"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tfechaRecibido\tfechaArchivo\n121007\t45873\tNULL\n121008\t45875\tNULL\n121009\t45875\tNULL\n121010\t45875\tNULL\n121011\t45875\tNULL\n",
+  "stderr": "",
+  "execution_time_ms": 366
+}

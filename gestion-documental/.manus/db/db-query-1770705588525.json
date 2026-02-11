@@ -1,0 +1,9 @@
+{
+  "query": "UPDATE users SET appRole = 'administrador' WHERE openId = 'BepR9rXd3PxaE6KmcVgBAB'",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2mciBb6nPqgsdQa.496c41228a3b --database Kgz6DNfZa9ot4yWR2J8W2H --execute UPDATE users SET appRole = 'administrador' WHERE openId = 'BepR9rXd3PxaE6KmcVgBAB'",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 363
+}
