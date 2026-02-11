@@ -2,7 +2,7 @@
   "version": 2,
   "framework": "vite",
   "installCommand": "npm install --legacy-peer-deps",
-  "buildCommand": "npm run build",
+  "buildCommand": "./node_modules/.bin/vite build && ./node_modules/.bin/esbuild server/_core/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
   "rewrites": [
     { "source": "/api/trpc/(.*)", "destination": "/api/trpc.ts" },
     { "source": "/(.*)", "destination": "/index.html" }
