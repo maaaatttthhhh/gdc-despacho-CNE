@@ -2,11 +2,12 @@
   "name": "gestion-documental",
   "version": "1.0.0",
   "type": "module",
-  "scripts": {
-    "dev": "tsx watch server/_core/index.ts",
-    "build": "vite build && esbuild server/_core/index.ts --platform=node --packages=external --bundle --format=esm --outfile=api/index.js",
-    "start": "node dist/index.js"
-  },
+"scripts": {
+  "dev": "tsx watch server/_core/index.ts",
+  "build": "vite build && esbuild server/_core/index.ts --platform=node --packages=external --bundle --format=esm --outfile=api/index.js",
+  "install": "npm install --force"
+},
+
   "dependencies": {
     "@aws-sdk/client-s3": "^3.693.0",
     "@aws-sdk/s3-request-presigner": "^3.693.0",
