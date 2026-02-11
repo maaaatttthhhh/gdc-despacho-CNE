@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "buildCommand": "pnpm build",
-  "installCommand": "pnpm install --no-frozen-lockfile",
   "framework": "vite",
+  "installCommand": "npm install --legacy-peer-deps",
+  "buildCommand": "npm run build",
   "rewrites": [
     { "source": "/api/trpc/(.*)", "destination": "/api/trpc.ts" },
     { "source": "/(.*)", "destination": "/index.html" }
