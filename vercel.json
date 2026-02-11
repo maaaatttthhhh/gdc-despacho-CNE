@@ -1,13 +1,8 @@
 {
   "version": 2,
+  "public": true,
   "rewrites": [
-    {
-      "source": "/api/trpc/(.*)",
-      "destination": "/api/trpc.ts"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
+    { "source": "/api/trpc/(.*)", "destination": "/api/trpc.ts" },
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
