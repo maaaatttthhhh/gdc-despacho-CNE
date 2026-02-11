@@ -3,7 +3,16 @@
   "buildCommand": "npm install --force && npm run build",
   "installCommand": "npm install --force",
   "framework": "vite",
+  "outputDirectory": "dist/public",
   "rewrites": [
+    {
+      "source": "/api/trpc/(.*)",
+      "destination": "/api/index.js"
+    },
+    {
+      "source": "/api/oauth/(.*)",
+      "destination": "/api/index.js"
+    },
     {
       "source": "/(.*)",
       "destination": "/index.html"
