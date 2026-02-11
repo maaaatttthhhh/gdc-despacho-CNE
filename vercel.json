@@ -1,15 +1,11 @@
 {
   "version": 2,
-  "framework": "vite",
+  "buildCommand": "npm run build",
+  "installCommand": "npm install --include=dev --force",
   "outputDirectory": "dist/public",
+  "framework": "vite",
   "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "/api/index.js"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
+    { "source": "/api/(.*)", "destination": "/api/index.js" },
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
