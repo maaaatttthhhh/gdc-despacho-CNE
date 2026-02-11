@@ -1,16 +1,10 @@
 {
   "version": 2,
-  "buildCommand": "npm run build",
-  "installCommand": "npm install --force",
   "framework": "vite",
   "outputDirectory": "dist/public",
   "rewrites": [
     {
-      "source": "/api/trpc/(.*)",
-      "destination": "/api/index.js"
-    },
-    {
-      "source": "/api/oauth/(.*)",
+      "source": "/api/(.*)",
       "destination": "/api/index.js"
     },
     {
