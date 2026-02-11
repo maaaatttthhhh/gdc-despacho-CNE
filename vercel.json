@@ -4,6 +4,7 @@
   "installCommand": "npm install --force",
   "framework": "vite",
   "rewrites": [
+<<<<<<< HEAD
     {
       "source": "/api/trpc/(.*)",
       "destination": "/api/index.js"
@@ -22,4 +23,9 @@
       "runtime": "vercel-node@latest"
     }
   }
+=======
+    { "source": "/api/trpc/(.*)", "destination": "/api/trpc.ts" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+>>>>>>> 38f9c7248b19834126a8769deee317ff567ba1eb
 }
