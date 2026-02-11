@@ -4,7 +4,10 @@
     {
       "src": "package.json",
       "use": "@vercel/static-build",
-      "config": { "distDir": "dist/public" }
+      "config": { 
+        "distDir": "dist/public",
+        "installCommand": "pnpm install --no-frozen-lockfile --force"
+      }
     },
     {
       "src": "api/trpc.ts",
