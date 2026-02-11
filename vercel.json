@@ -5,8 +5,13 @@
   "outputDirectory": "dist/public",
   "framework": "vite",
   "rewrites": [
-    { "source": "/api/trpc/(.*)", "destination": "/api/index.js" },
-    { "source": "/api/oauth/(.*)", "destination": "/api/index.js" },
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/index.js"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ]
 }
