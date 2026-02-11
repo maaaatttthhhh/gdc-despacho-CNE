@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "installCommand": "pnpm install --no-frozen-lockfile",
   "builds": [
     {
       "src": "package.json",
@@ -12,13 +13,7 @@
     }
   ],
   "rewrites": [
-    {
-      "source": "/api/trpc/(.*)",
-      "destination": "/api/trpc.ts"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
+    { "source": "/api/trpc/(.*)", "destination": "/api/trpc.ts" },
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
