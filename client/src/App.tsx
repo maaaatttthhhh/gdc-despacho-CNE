@@ -4,7 +4,8 @@ import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import { AuthProvider, useAuth } from "./contexts/AuthContext";
+import { useAuth } from "@/_core/hooks/useAuth";
+import { getLoginUrl } from "@/const";
 import Dashboard from "./pages/Dashboard";
 import ProcesosPracticas from "./pages/ProcesosPracticas";
 import InfLogos from "./pages/InfLogos";
@@ -18,8 +19,8 @@ import Alertas from "./pages/Alertas";
 import AdminUsuarios from "./pages/AdminUsuarios";
 import ConfigSemaforo from "./pages/ConfigSemaforo";
 import ImportarExcel from "./pages/ImportarExcel";
-import Login from "./pages/Login";
 import DashboardLayout from "./components/DashboardLayout";
+import { Loader2 } from "lucide-react";
 
 function AuthenticatedRouter() {
   return (
@@ -46,10 +47,30 @@ function AuthenticatedRouter() {
 }
 
 function AppContent() {
-  const { isAuthenticated } = useAuth();
+  const { user, loading, isAuthenticated } = useAuth();
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0C2340] to-[#1B3A5C]">
+        <div className="text-center">
+          <Loader2 className="w-10 h-10 text-[#D4A843] animate-spin mx-auto mb-4" />
+          <p className="text-white/60 text-sm">Cargando sistema...</p>
+        </div>
+      </div>
+    );
+  }
 
   if (!isAuthenticated) {
-    return <Login />;
+    // Redirect to OAuth login
+    window.location.href = getLoginUrl();
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0C2340] to-[#1B3A5C]">
+        <div className="text-center">
+          <Loader2 className="w-10 h-10 text-[#D4A843] animate-spin mx-auto mb-4" />
+          <p className="text-white/60 text-sm">Redirigiendo al inicio de sesión...</p>
+        </div>
+      </div>
+    );
   }
 
   return <AuthenticatedRouter />;
@@ -59,12 +80,10 @@ function App() {
   return (
     <ErrorBoundary>
       <ThemeProvider defaultTheme="light">
-        <AuthProvider>
-          <TooltipProvider>
-            <Toaster />
-            <AppContent />
-          </TooltipProvider>
-        </AuthProvider>
+        <TooltipProvider>
+          <Toaster />
+          <AppContent />
+        </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
   );
