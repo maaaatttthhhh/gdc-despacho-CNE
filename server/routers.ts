@@ -59,7 +59,7 @@ export const appRouter = router({
         diasDespacho: z.number().optional(),
       }))
       .mutation(async ({ input }) => {
-        return createExpediente(input);
+        return createExpediente(input as any);
       }),
 
     update: protectedProcedure
@@ -97,7 +97,7 @@ export const appRouter = router({
             throw new Error("No tiene permisos para editar este expediente");
           }
         }
-        return updateExpediente(id, data);
+        return updateExpediente(id, data as any);
       }),
 
     delete: adminProcedure
@@ -123,7 +123,7 @@ export const appRouter = router({
         enlace: z.string().optional(),
       }))
       .mutation(async ({ input }) => {
-        return createAuto(input);
+        return createAuto(input as any);
       }),
 
     update: protectedProcedure
@@ -138,7 +138,7 @@ export const appRouter = router({
       }))
       .mutation(async ({ input }) => {
         const { id, ...data } = input;
-        return updateAuto(id, data);
+        return updateAuto(id, data as any);
       }),
 
     delete: adminProcedure
@@ -166,7 +166,7 @@ export const appRouter = router({
         enlace: z.string().optional(),
       }))
       .mutation(async ({ input }) => {
-        return createOficio(input);
+        return createOficio(input as any);
       }),
 
     update: protectedProcedure
@@ -183,7 +183,7 @@ export const appRouter = router({
       }))
       .mutation(async ({ input }) => {
         const { id, ...data } = input;
-        return updateOficio(id, data);
+        return updateOficio(id, data as any);
       }),
 
     delete: adminProcedure
