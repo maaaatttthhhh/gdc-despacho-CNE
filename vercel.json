@@ -1,6 +1,9 @@
 {
   "version": 2,
   "installCommand": "npm install --force",
-  "buildCommand": "npx vite build && mkdir -p .vercel/output/static && cp -r dist/public/* .vercel/output/static/ && echo '{\"version\":3,\"routes\":[{\"handle\":\"filesystem\"},{\"src\":\"/(.*)\",\"dest\":\"/index.html\"}]}' > .vercel/output/config.json",
-  "outputDirectory": ".vercel/output/static"
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 }
