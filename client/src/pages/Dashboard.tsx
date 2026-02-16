@@ -69,7 +69,33 @@ function CustomTooltip({ active, payload, label }: any) {
 
 export default function Dashboard() {
   const { user } = useAuth();
-  const { data: stats, isLoading } = trpc.dashboard.stats.useQuery();
+const isLoading = false;
+
+const stats = {
+  moduleCounts: {
+    procesos_practicas: 12,
+    inf_logos: 8,
+    revocatorias: 5,
+    inf_ordinarios: 10,
+    salvamentos: 4,
+    archivados: 6,
+  },
+  abogadoCounts: {
+    "Abogado 1": 15,
+    "Abogado 2": 10,
+    "Abogado 3": 8,
+  },
+  semaforo: {
+    verde: 20,
+    amarillo: 10,
+    rojo: 5,
+  },
+  totalAutos: 18,
+  totalOficios: 25,
+  totalExpedientes: 45,
+  totalAlertas: 3,
+};
+
 
   if (isLoading || !stats) {
     return (
