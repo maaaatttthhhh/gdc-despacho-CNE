@@ -1,0 +1,48 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1770704514454,
+      "tag": "0000_funny_jane_foster",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1770704619007,
+      "tag": "0001_known_risque",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1770739579068,
+      "tag": "0002_complete_alex_power",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1770744512303,
+      "tag": "0003_romantic_lethal_legion",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1770745967291,
+      "tag": "0004_petite_terror",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1771256787667,
+      "tag": "0005_dazzling_mauler",
+      "breakpoints": true
+    }
+  ]
+}
