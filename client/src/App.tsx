@@ -60,18 +60,10 @@ function AppContent() {
     );
   }
 
-  if (!isAuthenticated) {
-    // Redirect to OAuth login
-    window.location.href = getLoginUrl();
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0C2340] to-[#1B3A5C]">
-        <div className="text-center">
-          <Loader2 className="w-10 h-10 text-[#D4A843] animate-spin mx-auto mb-4" />
-          <p className="text-white/60 text-sm">Redirigiendo al inicio de sesión...</p>
-        </div>
-      </div>
-    );
-  }
+if (!isAuthenticated) {
+  return <AuthenticatedRouter />;
+}
+
 
   return <AuthenticatedRouter />;
 }
